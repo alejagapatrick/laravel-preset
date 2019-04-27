@@ -21,6 +21,7 @@ class Preset extends LaravelPreset
         static::updateAppServiceProvider();
         static::updateModelsDirectory();
         static::updateWebpackConfig();
+        static::updateAppConfigFile();
         static::updateLanguageFiles();
         static::installTailwind();
     }
@@ -65,6 +66,14 @@ class Preset extends LaravelPreset
     public static function updateEnvExampleFile()
     {
         copy(__DIR__.'/stubs/.env.example', base_path('.env.example'));
+        file_put_contents(
+            $path = base_path('config/database.php'),
+            str_replace(
+                "'default' => env('DB_CONNECTION', 'mysql'),",
+                "'default' => env('DB_CONNECTION', 'pgsql'),",
+                file_get_contents($path)
+            )
+        );
     }
 
     public static function updateViewsFiles()
@@ -102,7 +111,32 @@ class Preset extends LaravelPreset
         if (File::exists($path = app_path('User.php'))) {
             unlink(app_path('User.php'));
         }
-        copy(__DIR__.'/stubs/auth.php', base_path('config/auth.php'));
+
+        file_put_contents(
+            $path = base_path('config/auth.php'),
+            str_replace(
+                "'model' => App\User::class",
+                "'model' => App\Models\User::class",
+                file_get_contents($path)
+            )
+        );
+    }
+
+    public static function updateAppConfigFile()
+    {
+        $path = base_path('config/app.php');
+        $content = file_get_contents($path);
+        $values = [
+            "env('APP_NAME', 'Laravel')" => "env('APP_NAME', 'E2Consult')",
+            "'timezone' => 'UTC'" => "'timezone' => 'Europe/Oslo'",
+            "'locale' => 'en'" => "'locale' => env('APP_LOCALE', 'no')",
+            "'faker_locale' => 'en_US'" => "'faker_locale' => 'nb_NO'",
+        ];
+
+        foreach ($values as  $search => $replace) {
+            $content = str_replace($search, $replace, $content);
+        }
+        file_put_contents($path, $content);
     }
 
     public static function updateWebpackConfig()

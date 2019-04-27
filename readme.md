@@ -2,7 +2,7 @@
 
 E2Consult is a webdevelopment team based in Oslo, Norway. You'll find more information about us [on our website](https://e2consult.no).
 
-This is our default preset when initializing a new project. Do ont use it on existing projects as it does delete and overwrite a lot of files.
+This is our default preset when initializing a new project. Don't use it with existing projects as it does delete and overwrite a lot of files.
 
 ## Installation
 
@@ -16,7 +16,7 @@ composer require e2consult/laravel-preset
 
 To use it, you run the command:
 
-``` php
+```bash
     php artisan preset e2consult
 ```
 
