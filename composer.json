@@ -21,6 +21,7 @@
         }
     },
     "require": {
+        "guzzlehttp/guzzle": "*",
         "predis/predis": "^1.1"
     }
 }
