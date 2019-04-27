@@ -19,5 +19,8 @@
         "laravel": {
             "providers": ["E2Consult\\LaravelPreset\\E2ConsultServiceProvider"]
         }
+    },
+    "require": {
+        "predis/predis": "^1.1"
     }
 }

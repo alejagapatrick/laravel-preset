@@ -1,4 +1,4 @@
-# E2Consult Default Laravel Preset
+# Laravel Preset
 
 E2Consult is a webdevelopment team based in Oslo, Norway. You'll find more information about us [on our website](https://e2consult.no).
 
