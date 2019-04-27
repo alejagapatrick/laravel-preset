@@ -1,0 +1,7 @@
+.button {
+    @apply .shadow .bg-blue-light .no-underline .rounded-lg .text-sm .py-2 .px-5 .text-blue-lightest .font-semibold .whitespace-no-wrap;
+
+    &.is-outlined {
+        @apply .bg-white .border .border-blue .text-blue ;
+    }
+}

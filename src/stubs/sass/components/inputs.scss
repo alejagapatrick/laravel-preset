@@ -1,0 +1,16 @@
+
+input.input {
+  @apply .bg-white .leading-tight .border .border-grey-light .rounded .p-2 .text-xs .w-full;
+}
+
+.input:focus{
+  @apply .border-grey .outline-none .bg-grey-lighter;
+}
+
+select {
+  @apply .bg-white .leading-tight .block .text-xs .appearance-none .text-grey-darker .py-2 .px-4 .rounded  .border .border-grey-light .w-full;
+}
+
+.select:focus{
+  @apply .border-grey .outline-none .bg-grey-lighter;
+}

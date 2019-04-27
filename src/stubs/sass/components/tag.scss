@@ -1,0 +1,21 @@
+.tag {
+    @apply .inline-block .rounded-full .px-3 .py-1 .text-sm .mr-2;
+
+    &.is-primary {
+      @apply .bg-blue-darker .text-white;
+    }
+
+    &.is-info {
+        @apply .bg-blue-light .text-white;
+    }
+
+    &.is-danger {
+        @apply .bg-red-light .text-white;
+
+    }
+
+    &.is-warning {
+        @apply .bg-yellow-dark .text-black;
+
+    }
+}

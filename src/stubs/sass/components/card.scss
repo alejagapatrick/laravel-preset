@@ -1,0 +1,16 @@
+.card {
+    @apply .border .mx-4 .p-5 .rounded-lg .shadow-md .bg-white;
+}
+
+
+.card-title {
+  @apply .text-2xl .font-normal .text-center;
+}
+
+.main-card {
+    @apply .bg-white .p-6 .rounded .rounded-lg .shadow;
+    // .lg:w-3/4
+    // .lg:mx-auto
+    // .md:py-12
+    // .md:px-16
+}

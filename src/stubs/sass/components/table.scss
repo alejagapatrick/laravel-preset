@@ -1,0 +1,31 @@
+table {
+  @apply .border-collapse .border .rounded .shadow-md;
+}
+
+table > thead {
+  @apply .bg-grey-lighter .uppercase .text-grey-darker .py-2;
+}
+
+table > thead > tr {
+  @apply .py-2;
+}
+
+table > thead > tr > th{
+  @apply .text-left .p-3;
+}
+
+table > tbody > tr > td {
+   @apply .p-3 .text-grey-darkest;
+}
+
+table > tbody > tr > th {
+   @apply .p-3 .text-grey-darkest;
+}
+
+table > tbody tr:nth-child(odd) {
+   @apply .bg-white;
+}
+
+table > tbody tr:nth-child(even) {
+   @apply .bg-grey-lightest;
+}

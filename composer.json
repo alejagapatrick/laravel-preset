@@ -1,0 +1,23 @@
+{
+    "name": "e2consult/laravel-preset",
+    "description": "The default E2 Consult Laravel preset.",
+    "keywords": ["laravel", "laravel preset", "e2consult"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Einar-Johan Hansen",
+            "email": "einar@e2consult.no"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "E2Consult\\LaravelPreset\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": ["E2Consult\\LaravelPreset\\E2ConsultServiceProvider"]
+        }
+    }
+}
